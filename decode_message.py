@@ -1,6 +1,6 @@
 import requests
 
-def print_secret_message(google_doc_url: str):
+def get_secret_message(google_doc_url: str):
     response = requests.get(google_doc_url)
     if response.status_code != 200:
         print("Failed to fetch document.")
@@ -25,5 +25,11 @@ def print_secret_message(google_doc_url: str):
     for x, y, char in grid_data:
         grid[y][x] = char
 
+    message = ''
     for row in grid:
-        print(''.join(row))
+        for c in row:
+            if c.isupper():
+                message += c
+
+    print("Secret Message:", message)
+
