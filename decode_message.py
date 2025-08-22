@@ -33,3 +33,5 @@ def get_secret_message(google_doc_url: str):
 
     print("Secret Message:", message)
 
+url = "https://docs.google.com/document/d/e/2PACX-1vRPzbNQcx5UriHSbZ-9vmsTow_R6RRe7eyAU60xIF9Dlz-vaHiHNO2TKgDi7jy4ZpTpNqM7EvEcfr_p/pub"
+get_secret_message(url)
